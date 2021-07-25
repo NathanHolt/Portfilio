@@ -438,13 +438,13 @@ animation-delay: .3s;
   .anchor {
     position:absolute;
     z-index: 1;
-    top: 365%;
-    left: 13%;
+    top: 372%;
+    left: 18%;
     height: 300px;
     width: 300px;
-    transform: rotate(-15deg);
-    background-color: #35322c;
-    clip-path: polygon(6% 66%, 14% 80%, 32% 96%, 50% 100%, 69% 96%, 84% 89%, 91% 77%, 96% 69%, 97% 51%, 90% 63%, 81% 76%, 69% 84%, 59% 85%, 56% 78%, 55% 57%, 56% 34%, 56% 17%, 51% 26%, 48% 28%, 44% 20%, 49% 13%, 60% 22%, 48% 8%, 57% 24%, 48% 7%, 41% 19%, 45% 37%, 45% 63%, 45% 84%, 32% 79%, 22% 75%, 12% 59%, 6% 50%);
+    transform: rotate(-27deg);
+    /* background-color: #35322c; */
+    /* clip-path: polygon(6% 66%, 14% 80%, 32% 96%, 50% 100%, 69% 96%, 84% 89%, 91% 77%, 96% 69%, 97% 51%, 90% 63%, 81% 76%, 69% 84%, 59% 85%, 56% 78%, 55% 57%, 56% 34%, 56% 17%, 51% 26%, 48% 28%, 44% 20%, 49% 13%, 60% 22%, 48% 8%, 57% 24%, 48% 7%, 41% 19%, 45% 37%, 45% 63%, 45% 84%, 32% 79%, 22% 75%, 12% 59%, 6% 50%); */
   }
 
   .sand {
@@ -549,7 +549,7 @@ animation-delay: .3s;
 }
 
 @media screen and (max-width: 992px) {
-
+    
     h1, h2 {
         font-size: 3em;
     }
@@ -598,11 +598,19 @@ animation-delay: .3s;
     }
 
     .temp-pic {
-        height: 20%;
+        height: 28%;
         width: 90%;
         right: 3%;
         margin: 20px 0;
         z-index: 80;
+    }
+
+    .pic2 {
+        top: 230%;
+    }
+    
+    .pic3 {
+        top: 260%;
     }
 
     .temp-pic:hover {
@@ -628,8 +636,9 @@ animation-delay: .3s;
     }
 
     .anchor {
-        left: -10%;
+        left: 10%;
         height: 300px;
         width: 300px;
+        z-index: 10;
       }
   }
