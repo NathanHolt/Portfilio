@@ -45,6 +45,7 @@ h1, h2 {
 
 h1:hover, h2:hover {
     background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); 
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: move 300s linear infinite;
