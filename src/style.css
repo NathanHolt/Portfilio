@@ -1,0 +1,634 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body
+{
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: center;
+    color: #212529;
+    background-color: rgb(112, 105, 22);
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+::-webkit-scrollbar-track {
+    background: #3d3d3d;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #7b7780;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(128, 106, 207);
+}
+
+h1, h2 {
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    color: rgb(101, 176, 182);
+    font-size: 7em;
+    z-index: 99;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(11, 48, 78);
+}
+
+h1:hover, h2:hover {
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: move 300s linear infinite;
+    cursor: zoom-in;
+}
+
+h2 {
+    top: 40%;
+    padding-top: 20px;
+    font-size: 5em;
+}
+
+.webgl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    outline: none;
+    z-index: 99;
+}
+
+ul {
+    position: absolute;
+    top: 6%;
+    right: 15%;
+    display: flex;
+    color: rgb(62, 195, 204);
+    list-style-type: none;
+    z-index: 99;
+}
+
+a {
+    color: rgb(101, 176, 182);
+    margin: 20px;
+    font-size: 2rem;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+    color: rgb(88, 88, 88);
+}
+
+h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #060e16;
+    text-align: center;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #060e16;
+    margin: 0 auto;
+    padding: 5px 15px;
+}
+
+
+.waves {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(#1a1561, #692ab1, #a3511b);
+    margin: 0 auto;
+    text-align: center;
+}
+
+#depths {
+    top: 100%;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(#2d84d4, #0b6774);
+}
+
+.rope {
+    position: absolute;
+    z-index: 2;
+    display: inline-block;
+    vertical-align: middle;
+    left: 20%;
+    top: 100%;
+    height: 280%;
+    width: 10px;
+    overflow: hidden;
+    background: #725310;
+    background-size: 100%;
+    background-image: linear-gradient(to bottom, #775e22, #241900);
+}
+
+.rope::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 2px;
+    bottom: 0;
+    content: '';
+    background-size: 100%;
+    background-image: linear-gradient(45deg, #fff 25%,
+                                rgba(0,0,0,0) 25%,
+                                rgba(0,0,0,0) 50%,
+                                #fff 50%,
+                                #fff 75%,
+                                rgba(0,0,0,0) 75%,
+                                rgba(0,0,0,0) 100%);
+    background-size: 30px 30px;
+    opacity: 0.3;
+}
+
+.portrait {
+    position: absolute;
+    height: 300px;
+    width: 250px;
+    top: 108%;
+    right: 20%;
+    border-radius: 50%;
+    background:rgb(128, 106, 207);
+    box-shadow: -1px -1px rgb(102, 130, 156),
+                2px 2px rgb(82, 61, 160);
+    animation: picBounce 9s linear infinite;
+}
+
+.bio {
+    position: absolute;
+    height: 350px;
+    width: 400px;
+    top: 130%;
+    right: 40%;
+    border-radius: 20px;
+    background:rgb(128, 106, 207);
+    box-shadow: -1px -1px rgb(102, 130, 156),
+                2px 2px rgb(82, 61, 160);
+    animation: picBounce 9s linear infinite;
+    animation-delay: .6s;
+    z-index: 1;
+    transition: all .3s;
+}
+
+.bio:hover {
+    height: 400px;
+    width: 450px;
+}
+
+.skillz {
+    position: absolute;
+    height: 60px;
+    width: 220px;
+    top: 160%;
+    right: 20%;
+    border-radius: 20px;
+    background:rgb(128, 106, 207);
+    box-shadow: -1px -1px rgb(102, 130, 156),
+                2px 2px rgb(82, 61, 160);
+    animation: picBounce 9s linear infinite;
+    animation-delay: .2s;
+    z-index: 1;
+}
+
+.skillz > a {
+    color: rgb(52, 30, 133);
+}
+
+.skillz > a:hover {
+    color: rgb(8, 70, 241);
+}
+
+.shoal {
+    position: relative;
+    display: flex;
+    margin-left: -260px;
+    width: 300px;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.fish {
+    height: 80px;
+    width: 100px;
+    margin: 20px;
+    animation: bounce 2s linear infinite;
+}
+
+.fake {
+    clip-path: polygon(6% 26%, 7% 70%, 34% 50%, 45% 60%, 40% 73%, 61% 60%, 88% 55%, 82% 39%, 64% 30%, 50% 13%, 44% 32%, 28% 40%);
+    background-color: #3b3db6;
+}
+
+.fake2 {
+    clip-path: polygon(55% 2%, 53% 22%, 60% 35%, 66% 45%, 78% 45%, 89% 43%, 99% 29%, 96% 57%, 96% 81%, 85% 64%, 76% 61%, 60% 63%, 51% 73%, 47% 86%, 50% 100%, 19% 78%, 9% 62%, 1% 59%, 0 45%, 28% 26%);        background-color: #174892;
+    background-color: #174892;
+}
+
+.fake3 {
+    clip-path: polygon(17% 37%, 34% 21%, 46% 17%, 66% 18%, 81% 18%, 88% 24%, 76% 42%, 97% 25%, 94% 48%, 95% 78%, 76% 61%, 74% 65%, 79% 76%, 75% 83%, 59% 87%, 31% 88%, 12% 84%, 0 78%, 0 71%, 10% 56%);
+    background-color: #174892;
+}
+
+.f2 {
+    animation-delay: .1s;
+}
+
+.f3 {
+    animation-delay: .2s;
+}
+
+.f4 {
+animation-delay: .3s;
+}
+
+.f5 {
+    animation-delay: .4s;
+}
+
+.f6 {
+    animation-delay: .5s;
+}
+
+.s1 {
+    animation: swimRight 25s linear infinite;
+    z-index: 5;
+    padding-top: 10%;
+
+}
+
+.s2 {
+    animation: swimLeft 18s linear infinite;
+}
+
+.s3 {
+    animation: swimLeft 18s linear infinite;
+    animation-delay: 9s;
+    z-index: 5;
+}
+
+.s4 {
+    animation: swimRight 30s linear infinite;
+    animation-delay: 9s;
+    z-index: 5;
+}
+
+.s5 {
+    animation: swimLeft 18s linear infinite;
+    animation-delay: 4s;
+}
+
+.fake4 {
+    clip-path: polygon(1% 85%, 3% 53%, 0 30%, 23% 42%, 42% 35%, 33% 30%, 41% 20%, 50% 17%, 56% 17%, 59% 29%, 74% 38%, 95% 45%, 100% 51%, 96% 60%, 89% 65%, 75% 68%, 74% 66%, 74% 67%, 65% 68%, 57% 72%, 58% 88%, 50% 85%, 44% 74%, 49% 66%, 36% 64%, 34% 77%, 29% 70%, 21% 68%, 27% 60%, 16% 61%);
+    background-color: #102c55;
+}
+
+.fish {
+  transform: scaleX(-1);    
+}
+  
+#depths2 {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(#0b6774, #0d243d);
+}
+
+.temp-pic {
+    position: absolute;
+    height: 20%;
+    width: 40%;
+    margin: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    background: rgb(124, 43, 81);
+    box-shadow: -1px -1px rgb(102, 130, 156),
+                2px 2px rgb(63, 21, 41);    
+    animation: picBounce 9s linear infinite;
+    transition: all .3s;
+}
+
+.temp-pic:hover {
+    height: 24%;
+    width: 45%;
+    font-size: 3rem;
+}
+
+.proj-des {
+    width: 60%;
+}
+
+.proj-pic {
+    width: 35%;
+    height: 90%;
+    border-radius: 10px;
+    background: rgb(151, 56, 100); 
+}
+
+.pic1 {
+    right: 15%;
+}
+
+.pic2 {
+    top: 225%;
+    right: 25%;
+    animation-delay: .2s;
+}
+
+.pic3 {
+    top: 250%;
+    right: 20%;
+    animation-delay: .8s;
+}
+
+.pic4 {
+    top: 275%;
+    right: 30%;
+    animation-delay: .6s;
+}
+
+
+#abyss {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(#0d243d, #060e16);
+  overflow: hidden;
+}
+
+  .jellyDiv {
+    animation: swimRight 80s linear infinite;
+  }
+  
+  .anglerDiv {
+    animation: swimLeft 30s linear infinite;
+  }
+
+  .jelly {
+    position: absolute;
+    filter: grayscale(.5);
+    height: 20vh;
+    width: 200px;
+    top: 320%;
+    animation: deepBounce 8s linear infinite;
+  }
+
+  .angler {
+    position: absolute;
+    filter: grayscale(.7);
+    height: 15vh;
+    width: 120px;
+    top: 365%;
+    animation: deepBounce 8s linear infinite;
+  }
+
+  .icon {
+      position: absolute;
+      height: 160px;
+      width: 160px;
+      border-radius: 20px;
+      background: #18c06c;
+      animation: picBounce 9s linear infinite;
+      transition: all .3s;
+      box-shadow: -1px -1px rgb(141, 167, 192),
+                    2px 2px rgb(83, 129, 14);
+  }
+
+  .icon:hover {
+      filter: sepia(.7);
+      cursor: pointer;
+  }
+
+  .i1 {
+      right: 15%;
+      top: 305%;
+  }
+
+  .i2 {
+    right: 30%;
+    top: 320%;
+    animation-delay: .8s;
+}
+
+.i3 {
+    right: 20%;
+    top: 345%;
+    animation-delay: .3s;
+}
+
+.i4 {
+    right: 37%;
+    top: 357%;
+    animation-delay: .6s;
+}
+
+  .anchor {
+    position:absolute;
+    z-index: 1;
+    top: 365%;
+    left: 13%;
+    height: 300px;
+    width: 300px;
+    transform: rotate(-15deg);
+    background-color: #35322c;
+    clip-path: polygon(6% 66%, 14% 80%, 32% 96%, 50% 100%, 69% 96%, 84% 89%, 91% 77%, 96% 69%, 97% 51%, 90% 63%, 81% 76%, 69% 84%, 59% 85%, 56% 78%, 55% 57%, 56% 34%, 56% 17%, 51% 26%, 48% 28%, 44% 20%, 49% 13%, 60% 22%, 48% 8%, 57% 24%, 48% 7%, 41% 19%, 45% 37%, 45% 63%, 45% 84%, 32% 79%, 22% 75%, 12% 59%, 6% 50%);
+  }
+
+  .sand {
+    position: relative;
+    z-index: 1;
+    bottom: -95%;
+    width: 100vw;
+    height: 5%;
+    background: rgb(112, 105, 22);
+
+  }
+  
+  .sand-dune {
+    position: relative;
+    bottom: -85%;
+    left: 2%;
+    height: 20%;
+    width: 60%;
+    border-radius: 100%;
+    background: rgb(51, 48, 10);
+  }
+
+  .sand-dune2{
+    position: relative;   
+    bottom: -54%;
+    right: -50%;
+    height: 40%;
+    width: 90%;
+    border-radius: 100%;
+    background: rgb(80, 74, 10);
+  }
+
+
+
+@keyframes swimLeft {
+    0% {
+      margin-left: -235px
+    }
+    90% {
+      margin-left: 100%
+    }
+    100% {
+      margin-left: 100%
+    }
+  }
+  
+  @keyframes swimRight {
+    0% {
+      margin-left: 100%
+    }
+    90% {
+      margin-left: -53%
+    }
+    100% {
+      margin-left: -53%
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 50%, 100% {
+      transform: translateY(0)
+    }
+    25% {
+      transform: translateY(-5px)
+    }
+    75% {
+      transform: translateY(-3px)
+    }
+  }
+  
+  @keyframes deepBounce {
+    0%, 50%, 100% {
+      transform: translateY(0)
+    }
+    25% {
+      transform: translateY(-15px)
+    }
+    75% {
+      transform: translateY(-13px)
+    }
+}
+
+@keyframes picBounce {
+    0%, 50%, 100% {
+      transform: translateY(0);
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateY(15px);
+      transform: translateX(-15px);
+    }
+    75% {
+      transform: translateY(-13px);
+      transform: translateX(13px);
+    }
+}
+
+@keyframes move {
+	to {
+		background-position: 4500vh;
+	}
+}
+
+@media screen and (max-width: 992px) {
+
+    h1, h2 {
+        font-size: 3em;
+    }
+    
+    a {
+        margin: 10px;
+        font-size: 1.5rem;
+    }
+
+    .portrait {
+        height: 150px;
+        width: 120px;
+    }
+    
+    .bio {
+        height: 350px;
+        width: 300px;
+        top: 130%;
+        right: 10%;
+        z-index: 99;
+    }
+
+    .bio:hover {
+        height: 350px;
+        width: 300px;
+    }
+    
+    .bio > p {
+        font-size: .9rem;
+    }
+    
+    
+    .skillz {
+        position: absolute;
+        height: 40px;
+        width: 150px;
+        top: 180%;
+        right: 20%;
+        border-radius: 20px;
+        background:rgb(128, 106, 207);
+        box-shadow: -1px -1px rgb(102, 130, 156),
+                    2px 2px rgb(82, 61, 160);
+        animation: picBounce 9s linear infinite;
+        animation-delay: .2s;
+        z-index: 1;
+    }
+
+    .temp-pic {
+        height: 20%;
+        width: 90%;
+        right: 3%;
+        margin: 20px 0;
+        z-index: 80;
+    }
+
+    .temp-pic:hover {
+        height: 20%;
+        width: 90%;
+    }
+
+    .proj-des > p {
+        font-size: .79rem;
+    }
+
+    .icon {
+        height: 100px;
+        width: 100px;
+    }
+
+    .i2 {
+        top: 323%;
+    }
+    
+    .i3 {
+        top: 340%;
+    }
+
+    .anchor {
+        left: -10%;
+        height: 300px;
+        width: 300px;
+      }
+  }
