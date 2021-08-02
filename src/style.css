@@ -414,24 +414,24 @@ animation-delay: .3s;
 
   .i1 {
       right: 15%;
-      top: 305%;
+      top: 315%;
   }
 
   .i2 {
     right: 30%;
-    top: 320%;
+    top: 330%;
     animation-delay: .8s;
 }
 
 .i3 {
     right: 20%;
-    top: 345%;
+    top: 355%;
     animation-delay: .3s;
 }
 
 .i4 {
     right: 37%;
-    top: 357%;
+    top: 367%;
     animation-delay: .6s;
 }
 
