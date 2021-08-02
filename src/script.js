@@ -20,6 +20,8 @@ let conf = {
 
 const simplex = new SimplexNoise()
 
+
+
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
 
@@ -35,6 +37,20 @@ scene.add(plane);
 plane.rotation.x = -Math.PI / 2 - 0.2;
 plane.position.y = -25;
 
+// const textureLoader = new THREE.TextureLoader()
+
+// const material = new THREE.MeshBasicMaterial({
+//     // map: textureLoader.load('/profilecopy.png'),
+//     color: 0x00ffe1
+// })
+
+// const geometry = new THREE.PlaneBufferGeometry(10,10.3)
+
+// const img = new THREE.Mesh(geometry, material)
+// img.position.y = -85;
+// img.position.x = 20;
+
+// scene.add(img)
 
 // Lights
 

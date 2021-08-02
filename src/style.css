@@ -168,10 +168,10 @@ p {
 
 .bio {
     position: absolute;
-    height: 350px;
-    width: 400px;
-    top: 130%;
-    right: 40%;
+    height: 450px;
+    width: 600px;
+    top: 115%;
+    right: 20%;
     border-radius: 20px;
     background:rgb(128, 106, 207);
     box-shadow: -1px -1px rgb(102, 130, 156),
@@ -183,16 +183,16 @@ p {
 }
 
 .bio:hover {
-    height: 400px;
-    width: 450px;
+    height: 450px;
+    width: 900px;
 }
 
 .skillz {
     position: absolute;
     height: 60px;
     width: 220px;
-    top: 160%;
-    right: 20%;
+    top: 170%;
+    right: 50%;
     border-radius: 20px;
     background:rgb(128, 106, 207);
     box-shadow: -1px -1px rgb(102, 130, 156),
@@ -313,7 +313,7 @@ animation-delay: .3s;
     margin: 20px;
     border-radius: 10px;
     display: flex;
-    align-content: center;
+    justify-content: center;
     align-items: center;
     background: rgb(124, 43, 81);
     box-shadow: -1px -1px rgb(102, 130, 156),
@@ -329,7 +329,7 @@ animation-delay: .3s;
 }
 
 .proj-des {
-    width: 60%;
+    width: 90%;
 }
 
 .proj-pic {
