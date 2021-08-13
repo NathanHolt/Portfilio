@@ -155,15 +155,17 @@ p {
 
 .portrait {
     position: absolute;
-    height: 300px;
-    width: 250px;
-    top: 108%;
-    right: 20%;
+    height: 90px;
+    width: 200px;
+    top: 175%;
+    right: 25%;
     border-radius: 50%;
     background:rgb(128, 106, 207);
     box-shadow: -1px -1px rgb(102, 130, 156),
                 2px 2px rgb(82, 61, 160);
     animation: picBounce 9s linear infinite;
+    display: flex;
+    justify-content: center;
 }
 
 .bio {
@@ -180,26 +182,43 @@ p {
     animation-delay: .6s;
     z-index: 1;
     transition: all .3s;
+    padding: 5px;
 }
 
 .bio:hover {
     height: 450px;
     width: 900px;
+    font-size: 1.4em;
+}
+
+.bio h3 {
+    font-size: 5em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 300;
+}
+
+.bio p {
+    font-size: 1.4em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 300;
 }
 
 .skillz {
     position: absolute;
-    height: 60px;
-    width: 220px;
-    top: 170%;
-    right: 50%;
-    border-radius: 20px;
+    height: 80px;
+    width: 250px;
+    top: 168%;
+    right: 45%;
+    border-radius: 50%;
     background:rgb(128, 106, 207);
     box-shadow: -1px -1px rgb(102, 130, 156),
                 2px 2px rgb(82, 61, 160);
     animation: picBounce 9s linear infinite;
     animation-delay: .2s;
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .skillz > a {
@@ -323,21 +342,34 @@ animation-delay: .3s;
 }
 
 .temp-pic:hover {
-    height: 24%;
     width: 45%;
-    font-size: 3rem;
+    height: 24%;
 }
 
 .proj-des {
     width: 90%;
+    transition: all .3s;
 }
 
-.proj-pic {
+.proj-des * {
+    font-size: 1.1em;
+}
+
+.proj-des h3 {
+    font-size: 1.4em;
+}
+
+.proj-des:hover {
+    width: 90%;
+    font-size: 1.2em;
+}
+
+/* .proj-pic {
     width: 35%;
     height: 90%;
     border-radius: 10px;
     background: rgb(151, 56, 100); 
-}
+} */
 
 .pic1 {
     right: 15%;
@@ -369,7 +401,7 @@ animation-delay: .3s;
   overflow: hidden;
 }
 
-  .jellyDiv {
+  /* .jellyDiv {
     animation: swimRight 80s linear infinite;
   }
   
@@ -393,7 +425,7 @@ animation-delay: .3s;
     width: 120px;
     top: 365%;
     animation: deepBounce 8s linear infinite;
-  }
+  } */
 
   .icon {
       position: absolute;
@@ -560,8 +592,9 @@ animation-delay: .3s;
     }
 
     .portrait {
-        height: 150px;
-        width: 120px;
+        height: 50px;
+        width: 150px;
+        top: 180%;
     }
     
     .bio {
@@ -586,15 +619,15 @@ animation-delay: .3s;
         position: absolute;
         height: 40px;
         width: 150px;
-        top: 180%;
-        right: 20%;
+        top: 190%;
+        right: 50%;
         border-radius: 20px;
         background:rgb(128, 106, 207);
         box-shadow: -1px -1px rgb(102, 130, 156),
                     2px 2px rgb(82, 61, 160);
         animation: picBounce 9s linear infinite;
         animation-delay: .2s;
-        z-index: 1;
+        z-index: 6;
     }
 
     .temp-pic {
@@ -628,11 +661,11 @@ animation-delay: .3s;
     }
 
     .i2 {
-        top: 323%;
+        top: 330%;
     }
     
     .i3 {
-        top: 340%;
+        top: 350%;
     }
 
     .anchor {
