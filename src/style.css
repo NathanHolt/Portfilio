@@ -364,13 +364,6 @@ animation-delay: .3s;
     font-size: 1.2em;
 }
 
-/* .proj-pic {
-    width: 35%;
-    height: 90%;
-    border-radius: 10px;
-    background: rgb(151, 56, 100); 
-} */
-
 .pic1 {
     right: 15%;
 }
@@ -401,31 +394,6 @@ animation-delay: .3s;
   overflow: hidden;
 }
 
-  /* .jellyDiv {
-    animation: swimRight 80s linear infinite;
-  }
-  
-  .anglerDiv {
-    animation: swimLeft 30s linear infinite;
-  }
-
-  .jelly {
-    position: absolute;
-    filter: grayscale(.5);
-    height: 20vh;
-    width: 200px;
-    top: 320%;
-    animation: deepBounce 8s linear infinite;
-  }
-
-  .angler {
-    position: absolute;
-    filter: grayscale(.7);
-    height: 15vh;
-    width: 120px;
-    top: 365%;
-    animation: deepBounce 8s linear infinite;
-  } */
 
   .icon {
       position: absolute;
@@ -475,8 +443,6 @@ animation-delay: .3s;
     height: 300px;
     width: 300px;
     transform: rotate(-27deg);
-    /* background-color: #35322c; */
-    /* clip-path: polygon(6% 66%, 14% 80%, 32% 96%, 50% 100%, 69% 96%, 84% 89%, 91% 77%, 96% 69%, 97% 51%, 90% 63%, 81% 76%, 69% 84%, 59% 85%, 56% 78%, 55% 57%, 56% 34%, 56% 17%, 51% 26%, 48% 28%, 44% 20%, 49% 13%, 60% 22%, 48% 8%, 57% 24%, 48% 7%, 41% 19%, 45% 37%, 45% 63%, 45% 84%, 32% 79%, 22% 75%, 12% 59%, 6% 50%); */
   }
 
   .sand {
